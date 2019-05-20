@@ -50,6 +50,30 @@
           </spacer>
          </item>
          <item>
+          <widget class="QWidget" name="widget_6" native="true">
+           <property name="styleSheet">
+            <string notr="true">background:#ffffff;
+margin-bottom:50px;
+border:none;
+border-radius:8px;</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="font">
+               <font>
+                <pointsize>13</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Sign in with your credentials</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="widget_2" native="true">
            <property name="styleSheet">
             <string notr="true">background:#ffffff;
