@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b22bc94c-98aa-4dbb-a9dc-7053d7c1a989" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../zomba_module/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../zomba_module/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../zomba_module/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../zomba_module/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../zomba_module/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../zomba_module/.idea/zomba_module.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CustomeItem.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DeveloperEdit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Developers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DrawngPane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../README.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../compile.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../database_layer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desktop.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../developer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../editpane.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../finale_plot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../help/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../help/make.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../help/source/conf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../help/source/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../i18n/af.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../icon/dev.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../icon/icon.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../icon/icon.qrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../icon/icon_rc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../icon/pencil-edit-button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../icon/trash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../icon_rc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../iconfinder_meanicons_25_197209.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main_window.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../metadata.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pb_tool.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../plugin_upload.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pylintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources.qrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources_rc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../scripts/compile-strings.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../scripts/run-env-linux.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../scripts/update-strings.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tabs.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/qgis_interface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/tenbytenraster.asc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/tenbytenraster.asc.aux.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/tenbytenraster.keywords" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/tenbytenraster.lic" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/tenbytenraster.prj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/tenbytenraster.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/test_init.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/test_qgis_environment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/test_resources.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/test_translations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/test_zomba_module_dialog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/testing/example.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/utilities.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../viewdetailsE.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zomba_module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zomba_module_dialog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zomba_module_dialog_base.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zomba_module_dialog_base.ui.autosave" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zomba_module_dialog_base_mod.ui" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zomba_module.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="573" column="60" selection-start-line="573" selection-start-column="59" selection-end-line="573" selection-end-column="60" />
+              <folding>
+                <element signature="e#24#1200#1" />
+                <element signature="e#1959#3105#0" />
+                <element signature="e#1959#2209#1" />
+                <element signature="e#2643#2826#0" />
+                <element signature="e#2944#3012#0" />
+                <element signature="e#3181#3609#0" />
+                <element signature="e#3181#3483#1" />
+                <element signature="e#3858#5929#0" />
+                <element signature="e#3858#5308#1" />
+                <element signature="e#5670#5753#0" />
+                <element signature="e#5791#5869#0" />
+                <element signature="e#5962#6314#0" />
+                <element signature="e#6346#6594#0" />
+                <element signature="e#6453#6594#0" />
+                <element signature="e#6680#6752#0" />
+                <element signature="e#6899#7126#0" />
+                <element signature="e#8146#8178#0" />
+                <element signature="e#8681#8685#0" />
+                <element signature="e#8729#8733#0" />
+                <element signature="e#8775#10329#0" />
+                <element signature="e#8852#9948#0" />
+                <element signature="e#9173#9537#0" />
+                <element signature="e#9545#9657#0" />
+                <element signature="e#10014#10080#0" />
+                <element signature="e#10110#10293#0" />
+                <element signature="e#10194#10293#0" />
+                <element signature="e#10373#10551#0" />
+                <element signature="e#10593#11194#0" />
+                <element signature="e#10915#10981#0" />
+                <element signature="e#11011#11194#0" />
+                <element signature="e#11095#11194#0" />
+                <element signature="e#11241#11809#0" />
+                <element signature="e#11241#11288#0" />
+                <element signature="e#11849#11957#0" />
+                <element signature="e#11999#12414#0" />
+                <element signature="e#12176#12414#0" />
+                <element signature="e#12455#14329#0" />
+                <element signature="e#12662#13949#0" />
+                <element signature="e#12765#12852#0" />
+                <element signature="e#13135#13222#0" />
+                <element signature="e#13694#13949#0" />
+                <element signature="e#14015#14081#0" />
+                <element signature="e#14111#14294#0" />
+                <element signature="e#14195#14294#0" />
+                <element signature="e#14371#16524#0" />
+                <element signature="e#14636#16047#0" />
+                <element signature="e#14725#14892#0" />
+                <element signature="e#14902#14922#0" />
+                <element signature="e#15169#15275#0" />
+                <element signature="e#15562#15645#0" />
+                <element signature="e#16112#16178#0" />
+                <element signature="e#16208#16376#0" />
+                <element signature="e#16287#16376#0" />
+                <element signature="e#16569#16978#0" />
+                <element signature="e#17007#17058#0" />
+                <element signature="e#17110#17236#0" />
+                <element signature="e#17279#17682#0" />
+                <element signature="e#17467#17590#0" />
+                <element signature="e#17669#17691#0" />
+                <element signature="e#18544#19577#0" />
+                <element signature="e#19187#19433#0" />
+                <element signature="e#19509#19529#0" />
+                <element signature="e#19613#19800#0" />
+                <element signature="e#19848#20317#0" />
+                <element signature="e#20362#21554#0" />
+                <element signature="e#21275#21341#0" />
+                <element signature="e#21371#21554#0" />
+                <element signature="e#21455#21554#0" />
+                <element signature="e#21376#22377#0" />
+                <element signature="e#22262#22445#0" />
+                <element signature="e#22346#22445#0" />
+                <element signature="e#23436#23480#0" />
+                <element signature="e#23529#23673#0" />
+                <element signature="e#23723#25209#0" />
+                <element signature="e#23820#24782#0" />
+                <element signature="e#24848#24915#0" />
+                <element signature="e#24945#25113#0" />
+                <element signature="e#25024#25113#0" />
+                <element signature="e#25122#25172#0" />
+                <element signature="e#25259#26194#0" />
+                <element signature="e#25915#25981#0" />
+                <element signature="e#26011#26194#0" />
+                <element signature="e#26095#26194#0" />
+                <element signature="e#26263#28359#0" />
+                <element signature="e#26424#26859#0" />
+                <element signature="e#28094#28161#0" />
+                <element signature="e#28191#28359#0" />
+                <element signature="e#28270#28359#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>deve</find>
+      <find>ursor.execute</find>
+      <find>developerslistwidget.cl</find>
+      <find>populateLeftList</find>
+      <find>available_plot_numbers</find>
+      <find>+</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/zomba_module.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="zomba_module_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zomba_module_2" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b22bc94c-98aa-4dbb-a9dc-7053d7c1a989" name="Default Changelist" comment="" />
+      <created>1560794102816</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560794102816</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/zomba_module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="573" column="60" selection-start-line="573" selection-start-column="59" selection-end-line="573" selection-end-column="60" />
+          <folding>
+            <element signature="e#24#1200#1" />
+            <element signature="e#1959#3105#0" />
+            <element signature="e#1959#2209#1" />
+            <element signature="e#2643#2826#0" />
+            <element signature="e#2944#3012#0" />
+            <element signature="e#3181#3609#0" />
+            <element signature="e#3181#3483#1" />
+            <element signature="e#3858#5929#0" />
+            <element signature="e#3858#5308#1" />
+            <element signature="e#5670#5753#0" />
+            <element signature="e#5791#5869#0" />
+            <element signature="e#5962#6314#0" />
+            <element signature="e#6346#6594#0" />
+            <element signature="e#6453#6594#0" />
+            <element signature="e#6680#6752#0" />
+            <element signature="e#6899#7126#0" />
+            <element signature="e#8146#8178#0" />
+            <element signature="e#8681#8685#0" />
+            <element signature="e#8729#8733#0" />
+            <element signature="e#8775#10329#0" />
+            <element signature="e#8852#9948#0" />
+            <element signature="e#9173#9537#0" />
+            <element signature="e#9545#9657#0" />
+            <element signature="e#10014#10080#0" />
+            <element signature="e#10110#10293#0" />
+            <element signature="e#10194#10293#0" />
+            <element signature="e#10373#10551#0" />
+            <element signature="e#10593#11194#0" />
+            <element signature="e#10915#10981#0" />
+            <element signature="e#11011#11194#0" />
+            <element signature="e#11095#11194#0" />
+            <element signature="e#11241#11809#0" />
+            <element signature="e#11241#11288#0" />
+            <element signature="e#11849#11957#0" />
+            <element signature="e#11999#12414#0" />
+            <element signature="e#12176#12414#0" />
+            <element signature="e#12455#14329#0" />
+            <element signature="e#12662#13949#0" />
+            <element signature="e#12765#12852#0" />
+            <element signature="e#13135#13222#0" />
+            <element signature="e#13694#13949#0" />
+            <element signature="e#14015#14081#0" />
+            <element signature="e#14111#14294#0" />
+            <element signature="e#14195#14294#0" />
+            <element signature="e#14371#16524#0" />
+            <element signature="e#14636#16047#0" />
+            <element signature="e#14725#14892#0" />
+            <element signature="e#14902#14922#0" />
+            <element signature="e#15169#15275#0" />
+            <element signature="e#15562#15645#0" />
+            <element signature="e#16112#16178#0" />
+            <element signature="e#16208#16376#0" />
+            <element signature="e#16287#16376#0" />
+            <element signature="e#16569#16978#0" />
+            <element signature="e#17007#17058#0" />
+            <element signature="e#17110#17236#0" />
+            <element signature="e#17279#17682#0" />
+            <element signature="e#17467#17590#0" />
+            <element signature="e#17669#17691#0" />
+            <element signature="e#18544#19577#0" />
+            <element signature="e#19187#19433#0" />
+            <element signature="e#19509#19529#0" />
+            <element signature="e#19613#19800#0" />
+            <element signature="e#19848#20317#0" />
+            <element signature="e#20362#21554#0" />
+            <element signature="e#21275#21341#0" />
+            <element signature="e#21371#21554#0" />
+            <element signature="e#21455#21554#0" />
+            <element signature="e#21376#22377#0" />
+            <element signature="e#22262#22445#0" />
+            <element signature="e#22346#22445#0" />
+            <element signature="e#23436#23480#0" />
+            <element signature="e#23529#23673#0" />
+            <element signature="e#23723#25209#0" />
+            <element signature="e#23820#24782#0" />
+            <element signature="e#24848#24915#0" />
+            <element signature="e#24945#25113#0" />
+            <element signature="e#25024#25113#0" />
+            <element signature="e#25122#25172#0" />
+            <element signature="e#25259#26194#0" />
+            <element signature="e#25915#25981#0" />
+            <element signature="e#26011#26194#0" />
+            <element signature="e#26095#26194#0" />
+            <element signature="e#26263#28359#0" />
+            <element signature="e#26424#26859#0" />
+            <element signature="e#28094#28161#0" />
+            <element signature="e#28191#28359#0" />
+            <element signature="e#28270#28359#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

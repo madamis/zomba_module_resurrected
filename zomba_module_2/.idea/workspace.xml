@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f553a32e-2dca-4998-93dd-71fb9d43788e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/zomba_module.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeveloperEdit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Developers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DrawngPane.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compile.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database_layer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/developer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finale_plot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/form.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/form.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/help/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/help/make.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/help/source/conf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/help/source/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/i18n/af.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icon/dev.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icon/icon.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icon/icon.qrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icon/icon_rc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icon/pencil-edit-button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icon/trash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icon_rc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/iconfinder_meanicons_25_197209.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_window.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metadata.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pb_tool.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugin_upload.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources.qrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources_rc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/compile-strings.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/run-env-linux.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/update-strings.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/qgis_interface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/tenbytenraster.asc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/tenbytenraster.asc.aux.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/tenbytenraster.keywords" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/tenbytenraster.lic" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/tenbytenraster.prj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/tenbytenraster.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_init.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_qgis_environment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_resources.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_translations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_zomba_module_dialog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/testing/example.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/utilities.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zomba_module.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zomba_module_dialog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zomba_module_dialog_base.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zomba_module_dialog_base.ui.autosave" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zomba_module_dialog_base_mod.ui" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="828" />
+    <option name="width" value="545" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="zomba_module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zomba_module" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pc\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\zomba_module" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f553a32e-2dca-4998-93dd-71fb9d43788e" name="Default Changelist" comment="" />
+      <created>1560627035322</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560627035322</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25744048" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zomba_module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="194" column="46" lean-forward="true" selection-start-line="194" selection-start-column="46" selection-end-line="194" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zomba_module_dialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="66" column="26" lean-forward="true" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

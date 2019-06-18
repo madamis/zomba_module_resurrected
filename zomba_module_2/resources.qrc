@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="/plugins/zomba_module">
+    <file>icon.png</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>icon/pencil-edit-button.png</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>icon/trash.png</file>
+  </qresource>
+</RCC>
