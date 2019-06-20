@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3309bb0c-e599-4c7d-9720-d129ca579118" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zomba_module.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="71">
+              <caret line="523" column="44" selection-start-line="523" selection-start-column="44" selection-end-line="523" selection-end-column="44" />
+              <folding>
+                <element signature="e#24#1200#1" />
+                <element signature="e#1981#2231#1" />
+                <element signature="e#2966#3034#0" />
+                <element signature="e#3203#3505#1" />
+                <element signature="e#3880#5330#1" />
+                <element signature="e#8381#8413#0" />
+                <element signature="e#8728#8755#0" />
+                <element signature="e#8800#9173#0" />
+                <element signature="e#8884#9075#0" />
+                <element signature="e#9215#10371#0" />
+                <element signature="e#9232#9959#0" />
+                <element signature="e#9324#9803#0" />
+                <element signature="e#10025#10158#0" />
+                <element signature="e#10058#10158#0" />
+                <element signature="e#10188#10371#0" />
+                <element signature="e#10272#10371#0" />
+                <element signature="e#10409#10495#0" />
+                <element signature="e#10409#10437#0" />
+                <element signature="e#10534#10841#0" />
+                <element signature="e#10888#10926#0" />
+                <element signature="e#10970#11006#0" />
+                <element signature="e#11048#12610#0" />
+                <element signature="e#11125#12229#0" />
+                <element signature="e#11446#11818#0" />
+                <element signature="e#11826#11938#0" />
+                <element signature="e#12295#12361#0" />
+                <element signature="e#12391#12574#0" />
+                <element signature="e#12475#12574#0" />
+                <element signature="e#12654#12832#0" />
+                <element signature="e#12874#13475#0" />
+                <element signature="e#12891#13130#0" />
+                <element signature="e#13196#13262#0" />
+                <element signature="e#13292#13475#0" />
+                <element signature="e#13376#13475#0" />
+                <element signature="e#13522#14090#0" />
+                <element signature="e#13522#13569#0" />
+                <element signature="e#14130#14238#0" />
+                <element signature="e#14280#14695#0" />
+                <element signature="e#14457#14695#0" />
+                <element signature="e#14736#16670#0" />
+                <element signature="e#15116#16670#0" />
+                <element signature="e#15137#16196#0" />
+                <element signature="e#15248#15339#0" />
+                <element signature="e#15646#15737#0" />
+                <element signature="e#16269#16394#0" />
+                <element signature="e#16306#16394#0" />
+                <element signature="e#16432#16631#0" />
+                <element signature="e#16524#16631#0" />
+                <element signature="e#16712#19248#0" />
+                <element signature="e#17117#19248#0" />
+                <element signature="e#17138#18659#0" />
+                <element signature="e#17235#17420#0" />
+                <element signature="e#17430#17454#0" />
+                <element signature="e#17721#17831#0" />
+                <element signature="e#18142#18229#0" />
+                <element signature="e#18732#18861#0" />
+                <element signature="e#18769#18861#0" />
+                <element signature="e#18899#19083#0" />
+                <element signature="e#18986#19083#0" />
+                <element signature="e#19293#19702#0" />
+                <element signature="e#19731#19782#0" />
+                <element signature="e#19834#19954#0" />
+                <element signature="e#19997#20400#0" />
+                <element signature="e#20185#20308#0" />
+                <element signature="e#20435#21092#0" />
+                <element signature="e#20452#20747#0" />
+                <element signature="e#20812#20879#0" />
+                <element signature="e#20909#21092#0" />
+                <element signature="e#20993#21092#0" />
+                <element signature="e#22177#22264#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>hand</find>
+      <find>add</find>
+      <find>handl</find>
+      <find>develo</find>
+      <find>save</find>
+      <find>lf.matabu.developerslistwidget.clear()</find>
+      <find>plot_com</find>
+      <find>customers_list</find>
+      <find>matabu</find>
+      <find>show</find>
+      <find>populate_details</find>
+      <find>handle_login</find>
+      <find>log</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>edi</replace>
+      <replace>editPane</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/zomba_module_dialog.py" />
+        <option value="$USER_HOME$/PycharmProjects/SomethingElse/MainF.py" />
+        <option value="$USER_HOME$/PycharmProjects/SomethingElse/UserInterfaces.py" />
+        <option value="$USER_HOME$/PycharmProjects/New folder/presents/Main.py" />
+        <option value="$PROJECT_DIR$/../zomba_module_2/zomba_module_dialog.py" />
+        <option value="$PROJECT_DIR$/../zomba_module_2/zomba_module.py" />
+        <option value="$PROJECT_DIR$/zomba_module.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zomba_module_2" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pc\PycharmProjects\SomethingElse" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.MainF">
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="presents" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/PycharmProjects/New folder/presents" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/PycharmProjects/New folder/presents/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MainF" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SomethingElse" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/PycharmProjects/SomethingElse" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/PycharmProjects/SomethingElse/MainF.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main_win" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Simple" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/PycharmProjects/New folder/Simple" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/PycharmProjects/New folder/Simple/main_win.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.MainF" />
+        <item itemvalue="Python.main_win" />
+        <item itemvalue="Python.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3309bb0c-e599-4c7d-9720-d129ca579118" name="Default Changelist" comment="" />
+      <created>1560799877078</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560799877078</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.203125" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289689" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/PycharmProjects/SomethingElse/venv/Lib/site-packages/pip/_vendor/idna/core.py" />
+    <entry file="file://$USER_HOME$/PycharmProjects/New folder/Simple/main_win.py" />
+    <entry file="file://$USER_HOME$/PycharmProjects/SomethingElse/MainF.py" />
+    <entry file="file://$USER_HOME$/PycharmProjects/New folder/presents/Main.py" />
+    <entry file="file://$USER_HOME$/PycharmProjects/SomethingElse/UserInterfaces.py" />
+    <entry file="file://$PROJECT_DIR$/zomba_module_dialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="46" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zomba_module_2/zomba_module_dialog.py" />
+    <entry file="file://$PROJECT_DIR$/../zomba_module_2/zomba_module.py" />
+    <entry file="file://$PROJECT_DIR$/zomba_module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="523" column="44" selection-start-line="523" selection-start-column="44" selection-end-line="523" selection-end-column="44" />
+          <folding>
+            <element signature="e#24#1200#1" />
+            <element signature="e#1981#2231#1" />
+            <element signature="e#2966#3034#0" />
+            <element signature="e#3203#3505#1" />
+            <element signature="e#3880#5330#1" />
+            <element signature="e#8381#8413#0" />
+            <element signature="e#8728#8755#0" />
+            <element signature="e#8800#9173#0" />
+            <element signature="e#8884#9075#0" />
+            <element signature="e#9215#10371#0" />
+            <element signature="e#9232#9959#0" />
+            <element signature="e#9324#9803#0" />
+            <element signature="e#10025#10158#0" />
+            <element signature="e#10058#10158#0" />
+            <element signature="e#10188#10371#0" />
+            <element signature="e#10272#10371#0" />
+            <element signature="e#10409#10495#0" />
+            <element signature="e#10409#10437#0" />
+            <element signature="e#10534#10841#0" />
+            <element signature="e#10888#10926#0" />
+            <element signature="e#10970#11006#0" />
+            <element signature="e#11048#12610#0" />
+            <element signature="e#11125#12229#0" />
+            <element signature="e#11446#11818#0" />
+            <element signature="e#11826#11938#0" />
+            <element signature="e#12295#12361#0" />
+            <element signature="e#12391#12574#0" />
+            <element signature="e#12475#12574#0" />
+            <element signature="e#12654#12832#0" />
+            <element signature="e#12874#13475#0" />
+            <element signature="e#12891#13130#0" />
+            <element signature="e#13196#13262#0" />
+            <element signature="e#13292#13475#0" />
+            <element signature="e#13376#13475#0" />
+            <element signature="e#13522#14090#0" />
+            <element signature="e#13522#13569#0" />
+            <element signature="e#14130#14238#0" />
+            <element signature="e#14280#14695#0" />
+            <element signature="e#14457#14695#0" />
+            <element signature="e#14736#16670#0" />
+            <element signature="e#15116#16670#0" />
+            <element signature="e#15137#16196#0" />
+            <element signature="e#15248#15339#0" />
+            <element signature="e#15646#15737#0" />
+            <element signature="e#16269#16394#0" />
+            <element signature="e#16306#16394#0" />
+            <element signature="e#16432#16631#0" />
+            <element signature="e#16524#16631#0" />
+            <element signature="e#16712#19248#0" />
+            <element signature="e#17117#19248#0" />
+            <element signature="e#17138#18659#0" />
+            <element signature="e#17235#17420#0" />
+            <element signature="e#17430#17454#0" />
+            <element signature="e#17721#17831#0" />
+            <element signature="e#18142#18229#0" />
+            <element signature="e#18732#18861#0" />
+            <element signature="e#18769#18861#0" />
+            <element signature="e#18899#19083#0" />
+            <element signature="e#18986#19083#0" />
+            <element signature="e#19293#19702#0" />
+            <element signature="e#19731#19782#0" />
+            <element signature="e#19834#19954#0" />
+            <element signature="e#19997#20400#0" />
+            <element signature="e#20185#20308#0" />
+            <element signature="e#20435#21092#0" />
+            <element signature="e#20452#20747#0" />
+            <element signature="e#20812#20879#0" />
+            <element signature="e#20909#21092#0" />
+            <element signature="e#20993#21092#0" />
+            <element signature="e#22177#22264#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
