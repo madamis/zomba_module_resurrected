@@ -1,4 +1,4 @@
- # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 /***************************************************************************
  Zomba
@@ -35,7 +35,7 @@ from .developer import Developer
 # Initialize Qt resources from file resources.py
 from .resources import *
 # Import the code for the dialog
-from .zomba_module_dialog import ZombaDialog, EditPane, ViewDeletePane, CustomeUI
+from .zomba_module_dialog import ZombaDialog, CustomeUI, LoginPanel, Tabs, ViewDeletePane, EditPane
 import os.path
 
 class Zomba:
@@ -69,7 +69,7 @@ class Zomba:
 
         # Declare instance attributes
         self.actions = []
-        self.menu = self.tr(u'&Zomba_CLMS')
+        self.menu = self.tr(u'&Zomba_LMS')
 
         # Check if plugin was started the first time in current QGIS session
         # Must be set in initGui() to survive plugin reloads
@@ -192,122 +192,51 @@ class Zomba:
         if self.first_start == True:
             self.first_start = False
             self.dlg = ZombaDialog()
-            self.customeUi = CustomeUI()
+            self.loginPAnel = LoginPanel()
+            self.matabu = Tabs()
             self.viewDeletePane = ViewDeletePane()
             self.editPane = EditPane()
-            self.swidget = self.dlg.stackedWidget
-            self.swidget.setCurrentIndex(2)
+        self.matabu.mainLeftList.itemSelectionChanged.connect(self.selectionChanged)
+        self.matabu.filterList.textChanged.connect(self.filterListOnType)
+        self.loginPAnel.login.clicked.connect(self.handle_login)
 
-        self.dlg.mainLeftList.itemSelectionChanged.connect(self.selectionChanged)
-        self.dlg.filterList.textChanged.connect(self.filterListOnType)
-        self.dlg.login.clicked.connect(self.handle_login)
-        #        self.selection()
-        self.dlg.add_btn_2.clicked.connect(self.add_btn_handler)
-        self.dlg.save.clicked.connect(self.save_btn_handler)
-        self.dlg.customers_list.setCurrentIndex(-1)
+        self.selection()
+        self.matabu.add_btn_2.clicked.connect(self.add_btn_handler)
+        self.matabu.save.clicked.connect(self.save_btn_handler)
+        self.matabu.customers_list.setCurrentIndex(-1)
         self.populateLeftList()
         self.available_plot_numbers()
         self.available_customers()
         self.developers()
-        self.dlg.actionLogout.triggered.connect(self.handle_logout)
-        self.dlg.actionGeneral_Report.triggered.connect(self.handle_general_Report)
-        self.dlg.actionHelp.triggered.connect(self.handle_action_help)
-        self.rendermap()
-        print('editing this')
-        self.swidget.setCurrentIndex(1)
-        print(self.swidget.currentIndex())
-        if self.swidget.currentIndex()==1:
-            self.disablemenus()
-        self.dlg.show()
-
-    def disablemenus(self):
+        #runmethod
+        self.dlg.setCentralWidget(self.loginPAnel)
         self.dlg.actionLogout.setDisabled(True)
         self.dlg.actionGeneral_Report.setDisabled(True)
         self.dlg.actionHelp.setDisabled(True)
-
-    def enablemenus(self):
-        self.dlg.actionLogout.setDisabled(False)
-        self.dlg.actionGeneral_Report.setDisabled(False)
-        self.dlg.actionHelp.setDisabled(False)
+        self.dlg.actionLogout.triggered.connect(self.handle_logout)
+        self.dlg.actionGeneral_Report.triggered.connect(self.handle_general_Report)
+        self.dlg.actionHelp.triggered.connect(self.handle_action_help)
+        #self.dlg.menuLogout.addAction()
+        #self.dlg.actionLogout.addAction(self.handle_logout)
+        self.rendermap()
+        self.dlg.show()
 
     def handle_logout(self):
         print("am loging out")
-        self.swidget.setCurrentIndex(1)
+        self.dlg.setCentralWidget(self.loginPAnel)
+        self.dlg.actionLogout.setDisabled(True)
+        self.dlg.actionGeneral_Report.setDisabled(True)
+        self.dlg.actionHelp.setDisabled(True)
+        self.loginPAnel.login.clicked.connect(self.handle_login)
 
     def handle_general_Report(self):
-        self.swidget.setCurrentIndex(3)
+        pass
 
     def handle_action_help(self):
-        self.swidget.setCurrentIndex(2)
-
-    def handle_login(self):
-        connection = self.connection()
-        cursor = connection.cursor()
-        crudentialquery = "SELECT username, password FROM finale_users"
-        cursor.execute(crudentialquery)
-
-        USERNAME = self.dlg.logusername.text()
-        PASSWORD = self.dlg.logpassword.text()
-
-        get_crudentials = ("select * from finale_users where username = '" + USERNAME + "' AND PASSWORD = '" + PASSWORD + "'; ")
-        cursor.execute(get_crudentials)
-
-        records = cursor.fetchall()
-        if len(records) > 0:
-            self.swidget.setCurrentIndex(0)
-            self.enablemenus()
-        else:
-            self.showdialog("entered wrong values")
-
-        #print('logging in')
-        #self.dlg.setCentralWidget(self.dlg)
-
-    def handle_cancel_on_delete(self):
-        self.viewDeletePane.close()
-
-    # def report_plot_numbers(self):
-    #     connection = self.connection()
-    #     cursor = connection.cursor()
-    #     query = """select plot_name from finale_plot where plot_name not in (
-    #                 select plot_name from finale_plot FP join finale_owns FO on FP.plot_number = FO.plot_id);
-    #             """
-    #     cursor.execute(query)
-    #     for i in cursor:
-    #         self.report.plot.addItem(i[0])
-    #
-    # def report_customers(self):
-    #     try:
-    #         connection = self.connection()
-    #         cursor = connection.cursor()
-    #         query = """select number_of_plots, owner_id, firstname,lastname from(
-    #                                 select count(id) number_of_plots, owner_id from(
-    #                                     select id, owner_id from finale_owns union select 0 padding,
-    #                                     owner_id from finale_owner) as comb group by owner_id) owners
-    #                                 natural join
-    #                             finale_owner;
-    #                         """
-    #         cursor.execute(query)
-    #         for i in cursor:
-    #             self.report.customers.addItem(i[2]+" "+i[3]+"            ["+str(i[0]-1)+"]")
-    #
-    #     except(Exception, psycopg2.Error) as error:
-    #         if (connection):
-    #             print('failed to connect', error)
-    #             print('failed to connect from availabe customers')
-    #     finally:
-    #         '''closing database connection'''
-    #         if (connection):
-    #                  cursor.close()
-    #                  connection.close()
-    #                  print("psql is closed")
-
-    def handle_close(self):
-        # self.report_plot_numbers()
-        # self.report_customers()
-        self.dlg.hide()
+        pass
 
     def selectionChanged(self):
-        txt = self.getSelectedFeature(self.dlg.mainLeftList)
+        txt = self.getSelectedFeature()
         filter = ''
         try:
             connection = self.connection()
@@ -318,7 +247,7 @@ class Zomba:
             pn = cursor.fetchone()
             filter = str(pn[0])
             details_query = """select 
-            FP.plot_number, ST_Area(the_geom)/1000000 area, ST_Perimeter(the_geom) perimeter, ST_Distance(central_geom, the_geom), FL.village_name, FL.ta_name 
+            FP.plot_number, ST_Area(the_geom) area, ST_Perimeter(the_geom) perimeter, ST_Distance(central_geom, the_geom), FL.village_name, FL.ta_name 
                 from (select t.plot_number, t.geom the_geom, s.geom central_geom, t.location_id 
                 from finale_plot s, finale_plot t where s.plot_number = '30340' and t.plot_number = '"""+filter+"""') FP 
                 join finale_location FL on FP.location_id = FL.location_id where FP.plot_number = '"""+filter+"""';"""
@@ -339,10 +268,10 @@ class Zomba:
                      print("psql is closed")
         self.selected_layer(filter)
 
-    def getSelectedFeature(self,list):
-        row = list.currentRow()
-        item = list.item(row)
-        self.dlg.selectedFeature.setText(item.text())
+    def getSelectedFeature(self):
+        row =  self.matabu.mainLeftList.currentRow()
+        item = self.matabu.mainLeftList.item(row)
+        self.matabu.selectedFeature.setText(item.text())
         return item.text()
 
     def populateLeftList(self):
@@ -351,7 +280,7 @@ class Zomba:
             cursor = connection.cursor()
             query = """select plot_name from finale_plot;"""
             cursor.execute(query)
-            self.dlg.mainLeftList.addItems(str(x[0]) for x in cursor)
+            self.matabu.mainLeftList.addItems(str(x[0]) for x in cursor)
 
         except(Exception, psycopg2.Error) as error:
             if (connection):
@@ -367,13 +296,13 @@ class Zomba:
         #row = [plot number, area, perimeter, occupied,
         # longtude, latitude, distance
         # coordinates,plot name, area, perimeter, latitude, longtude distance from city council
-        self.dlg.reference_no.setText(str(row[0]))
-        self.dlg.area.setText(self.format_area(row[1]))
-        self.dlg.perimeter.setText(self.format_area(row[2]))
-        #self.dlg.occupied.setText(row[3])
-        self.dlg.longtude.setText(str(row[4]))
-        self.dlg.latitude.setText(str(row[5]))
-        self.dlg.distance.setText(self.format_area(row[3]))
+        self.matabu.reference_no.setText(str(row[0]))
+        self.matabu.area.setText(self.format_area(row[1]))
+        self.matabu.perimeter.setText(self.format_area(row[2]))
+        #self.matabu.occupied.setText(row[3])
+        self.matabu.longtude.setText(str(row[4]))
+        self.matabu.latitude.setText(str(row[5]))
+        self.matabu.distance.setText(self.format_area(row[3]))
 
     def addQuote(self, name):
         if name.find("'")>=0:
@@ -381,108 +310,105 @@ class Zomba:
         return name
 
     def filterListOnType(self):
-        filter_text =  self.dlg.filterList.text().lower()
-        #row = self.dlg.mainLeftList.currentRow()
-        for it in range(self.dlg.mainLeftList.count()):
-            item = self.dlg.mainLeftList.item(it)
+        filter_text =  self.matabu.filterList.text().lower()
+        #row = self.matabu.mainLeftList.currentRow()
+        for it in range(self.matabu.mainLeftList.count()):
+            item = self.matabu.mainLeftList.item(it)
             if filter_text in item.text().lower():
-                self.dlg.mainLeftList.setRowHidden(it, False)
+                self.matabu.mainLeftList.setRowHidden(it, False)
             else:
-                self.dlg.mainLeftList.setRowHidden(it, True)
+                self.matabu.mainLeftList.setRowHidden(it, True)
 
     def add_btn_handler(self):
-        firstname = self.dlg.firstname.text()
-        lastname = self.dlg.lastname.text()
-        phone = self.dlg.phone.text()
-        address = self.dlg.address.toPlainText()
+        firstname = self.matabu.firstname.text()
+        lastname = self.matabu.lastname.text()
+        phone = self.matabu.phone.text()
+        address = self.matabu.address.toPlainText()
 
-        if len(firstname) == 0 or len(lastname)==0 or len(phone)==0 or len(address)==0:
-            self.showdialog("PLEASE CHECK YOUR INPUT DATA\nYOU HAVE AN EMPTY FILD")
-        else:
-            try:
-                connection = self.connection()
-                cursor = connection.cursor()
-                insert_developer = """insert into finale_owner (firstname, lastname) 
-                            values ('""" + firstname + """', '""" + lastname + """') returning owner_id;"""
-                print(insert_developer)
-                cursor.execute(insert_developer)
-                owner_id = cursor.fetchone()[0]
-                print(owner_id)
-                connection.commit()
-                insert_contacts = """insert into finale_contact(owner_id, phone, address)
-                        values('""" + str(owner_id) + """', '""" + str(phone) + """', '""" + address + """');"""
-                cursor.execute(insert_contacts)
-                connection.commit()
-                self.showdialog("Developer added sucessifully")
-                firstname = self.dlg.firstname.setText('')
-                lastname = self.dlg.lastname.setText('')
-                phone = self.dlg.phone.setText('')
-                address = self.dlg.address.setText('')
-            except(Exception, psycopg2.Error) as error:
-                if (connection):
-                    print('failed to connect', error)
-                    print("failed at add btn handler")
-            finally:
-                '''closing database connection'''
-                if (connection):
-                         cursor.close()
-                         connection.close()
-                         print("psql is closed")
-            self.available_customers()
+        try:
+            connection = self.connection()
+            cursor = connection.cursor()
+            insert_developer = """insert into finale_owner (firstname, lastname) 
+                        values ('""" + firstname + """', '""" + lastname + """') returning owner_id;"""
+            print(insert_developer)
+            cursor.execute(insert_developer)
+            owner_id = cursor.fetchone()[0]
+            print(owner_id)
+            connection.commit()
+            insert_contacts = """insert into finale_contact(owner_id, phone, address)
+                    values('""" + str(owner_id) + """', '""" + str(phone) + """', '""" + address + """');"""
+            cursor.execute(insert_contacts)
+            connection.commit()
+            self.showdialog("Developer added sucessifully")
+            firstname = self.matabu.firstname.setText('')
+            lastname = self.matabu.lastname.setText('')
+            phone = self.matabu.phone.setText('')
+            address = self.matabu.address.setText('')
+            latestAddedDeveloperQuery = """
+                        select fname, lname, plot_name, st_area(geom), date_offered area
+                        from plot natural join developer where
+                        developer.id in(select max(id) from developer);
+                        """
+
+        except(Exception, psycopg2.Error) as error:
+            if (connection):
+                print('failed to connect', error)
+        finally:
+            '''closing database connection'''
+            if (connection):
+                     cursor.close()
+                     connection.close()
+                     print("psql is closed")
+        self.available_customers()
 
     def save_btn_handler(self):
-        plot = self.dlg.plot_combo.currentText()
-        customer = self.dlg.customers_list.currentText()
-        charged = self.dlg.charged_amount.text()
-        payment = self.dlg.payed_amount.text()
+        plot = self.matabu.plot_combo.currentText()
+        customer = self.matabu.customers_list.currentText()
+        charged = self.matabu.charged_amount.text()
+        payment = self.matabu.payed_amount.text()
         customer = customer[:-7]
 
-        if len(plot)==0 or len(customer)==0 or len(charged)==0 or len(payment)==0:
-            self.showdialog("PLEASE CHECK YOUR INPUTS")
-        else:
-            try:
-                connection = self.connection()
-                cursor = connection.cursor()
-                id = """
-                    select id from (
-                        select owner_id id, concat(firstname,' ',lastname) as co from finale_owner) fila
-                        where co = '"""+customer+"""'
-                """
-                cursor.execute(id)
-                ow_id = cursor.fetchone()[0]
-                cursor.execute("""select plot_number from finale_plot where plot_name ='"""+plot+"""'""")
-                pl_id = cursor.fetchone()[0]
-                insert_developer = """insert into finale_owns (owner_id, plot_id,amount_charged)
-                                    values ('"""+str(ow_id)+"""','"""+ str(pl_id)+"""', '"""+str(charged)+"""') returning id;"""
-                print(insert_developer)
-                cursor.execute(insert_developer)
-                owns = cursor.fetchone()[0]
-                print(owns)
-                connection.commit()
-                insert_payment = """insert into finale_payment(owns, amount)
-                                values('"""+str(owns)+"""', '"""+str(payment)+"""')"""
-                cursor.execute(insert_payment)
-                connection.commit()
-                self.showdialog("Successfully assigned customer to plot")
-                self.dlg.plot_combo.setCurrentIndex(-1)
-                self.dlg.customers_list.setCurrentIndex(-1)
-                self.dlg.charged_amount.setText('')
-                self.dlg.payed_amount.setText('')
-            except(Exception, psycopg2.Error) as error:
-                if (connection):
-                    print('failed to connect', error)
-                    print('failed to connect at save btn')
-            finally:
-                '''closing database connection'''
-                if (connection):
-                    cursor.close()
-                    connection.close()
-                    print("psql is closed")
-            self.available_plot_numbers()
-            self.available_customers()
-            self.dlg.developerslistwidget.clear()
-
-            self.developers()
+        try:
+            connection = self.connection()
+            cursor = connection.cursor()
+            id = """
+                select id from (
+	                select owner_id id, concat(firstname,' ',lastname) as co from finale_owner) fila
+	                where co = '"""+customer+"""'
+            """
+            cursor.execute(id)
+            ow_id = cursor.fetchone()[0]
+            cursor.execute("""select plot_number from finale_plot where plot_name ='"""+plot+"""'""")
+            pl_id = cursor.fetchone()[0]
+            insert_developer = """insert into finale_owns (owner_id, plot_id,amount_charged)
+                                values ('"""+str(ow_id)+"""','"""+ str(pl_id)+"""', '"""+str(charged)+"""') returning id;"""
+            print(insert_developer)
+            cursor.execute(insert_developer)
+            owns = cursor.fetchone()[0]
+            print(owns)
+            connection.commit()
+            insert_payment = """insert into finale_payment(owns, amount)
+                            values('"""+str(owns)+"""', '"""+str(payment)+"""')"""
+            cursor.execute(insert_payment)
+            connection.commit()
+            self.showdialog("Successfully assigned customer to plot")
+            self.matabu.plot_combo.setCurrentIndex(-1)
+            self.matabu.customers_list.setCurrentIndex(-1)
+            self.matabu.charged_amount.setText('')
+            self.matabu.payed_amount.setText('')
+        except(Exception, psycopg2.Error) as error:
+            if (connection):
+                print('failed to connect', error)
+        finally:
+            '''closing database connection'''
+            if (connection):
+                cursor.close()
+                connection.close()
+                print("psql is closed")
+        self.available_plot_numbers()
+        self.available_customers()
+        self.matabu.developerslistwidget.clear()
+        self.developers()
 
     def showdialog(self,feedback):
         msg = QMessageBox()
@@ -505,7 +431,7 @@ class Zomba:
     def round_number_to2dp(self, number):
         rigth = number[:number.find('.')]
         left = number[number.find('.'):number.find('.')+2]
-        return rigth + left
+        return rigth + '.' + left
 
     def format_area(self, area):
         strnum = str(area)
@@ -523,24 +449,49 @@ class Zomba:
         fin += right
         return self.round_number_to2dp(fin)
 
-    def selection(self):
-        try:
-            connection = self.connection()
-            cursor = connection.cursor()
-            query = """select fname, lname, plot_name, st_area(geom) area from developer Dv, plot Pl where Dv.plot_no = Pl.plot_no;"""
-            cursor.execute(query)
+    # def selection(self):
+    #     try:
+    #         connection = self.connection()
+    #         cursor = connection.cursor()
+    #         query = """select fname, lname, plot_name, st_area(geom) area from developer Dv, plot Pl where Dv.plot_no = Pl.plot_no;"""
+    #         cursor.execute(query)
+    #
+    #         for c in cursor:
+    #             print(c)
+    #     except(Exception, psycopg2.Error) as error:
+    #         if (connection):
+    #             print('faileed to connect', error)
+    #     finally:
+    #         '''closing database connection'''
+    #         if (connection):
+    #                  cursor.close()
+    #                  connection.close()
+    #                  print("psql is closed")
 
-            for c in cursor:
-                print(c)
-        except(Exception, psycopg2.Error) as error:
-            if (connection):
-                print('faileed to connect', error)
-        finally:
-            '''closing database connection'''
-            if (connection):
-                     cursor.close()
-                     connection.close()
-                     print("psql is closed")
+    def handle_login(self):
+        connection = self.connection()
+        cursor = connection.cursor()
+        crudentialquery = "SELECT username, password FROM finale_users"
+        cursor.execute(crudentialquery)
+
+        USERNAME = self.loginPAnel.username.text()
+        PASSWORD = self.loginPAnel.password.text()
+
+        get_crudentials = ("select * from finale_users where username = '" + USERNAME + "' AND PASSWORD = '" + PASSWORD + "'; ")
+        cursor.execute(get_crudentials)
+
+        records = cursor.fetchall()
+        if len(records) > 0:
+            self.dlg.setCentralWidget(self.matabu)
+            self.dlg.actionLogout.setDisabled(False)
+            self.dlg.actionGeneral_Report.setDisabled(False)
+            self.dlg.actionHelp.setDisabled(False)
+            self.loginPAnel = LoginPanel()
+        else:
+            self.showdialog("entered wrong values")
+
+        #print('logging in')
+        #self.dlg.setCentralWidget(self.matabu)
 
     def connection(self):
         connection = psycopg2.connect(user='postgres', password='12345678', host='localhost', port='5432',
@@ -548,7 +499,7 @@ class Zomba:
         return connection
 
     def available_plot_numbers(self):
-        self.dlg.plot_combo.clear()
+        self.matabu.plot_combo.clear()
         connection = self.connection()
         cursor = connection.cursor()
         query = """select plot_name from finale_plot where plot_name not in (
@@ -556,12 +507,12 @@ class Zomba:
                 """
         cursor.execute(query)
         for i in cursor:
-            self.dlg.plot_combo.addItem(i[0])
-        self.dlg.plot_combo.setCurrentIndex(-1)
+            self.matabu.plot_combo.addItem(i[0])
+        self.matabu.plot_combo.setCurrentIndex(-1)
 
     def available_customers(self):
         try:
-            self.dlg.customers_list.clear()
+            self.matabu.customers_list.clear()
             connection = self.connection()
             cursor = connection.cursor()
             query = """select number_of_plots, owner_id, firstname,lastname from(
@@ -573,13 +524,12 @@ class Zomba:
                             """
             cursor.execute(query)
             for i in cursor:
-                self.dlg.customers_list.addItem(i[2]+" "+i[3]+"    ["+str(i[0]-1)+"]")
-            self.dlg.customers_list.setCurrentIndex(-1)
+                self.matabu.customers_list.addItem(i[2]+" "+i[3]+"    ["+str(i[0]-1)+"]")
+            self.matabu.customers_list.setCurrentIndex(-1)
 
         except(Exception, psycopg2.Error) as error:
             if (connection):
                 print('failed to connect', error)
-                print('failed to connect from availabe customers')
         finally:
             '''closing database connection'''
             if (connection):
@@ -588,26 +538,28 @@ class Zomba:
                      print("psql is closed")
 
     def developers(self):
+        print("developers")
         try:
             connection = self.connection()
             cursor = connection.cursor()
-            query = """
+            query_o = """
                 select 
-	            P.owner_id, firstname, lastname, phone, address, plot_id, amount_charged, 
+	            P.owner_id, firstname, lastname, plot_id, amount_charged, 
                 plot_name, ST_Area(geom), O.created_at, location_id
 	            from finale_owns O join finale_owner P on O.owner_id = P.owner_id 
 	            join finale_contact L on P.owner_id = L.owner_id 
 	            join finale_plot FP on O.plot_id = FP.plot_number;
 	            """
-            cursor.execute(query)
-            for c in cursor:
-                print(c)
+            cursor.execute(query_o)
+            data = cursor.fetchall()
+            print(data)
+            for c in data:
                 self.viewDevelopersDetails(c)
-
+            print("try querry done")
         except(Exception, psycopg2.Error) as error:
             if (connection):
                 print('faileed to connect', error)
-                print('faileed to connect  from developers')
+                print(error)
         finally:
             '''closing database connection'''
             if (connection):
@@ -616,19 +568,18 @@ class Zomba:
                      print("psql is closed")
 
     def viewDevelopersDetails(self,rowFromQuery):
+        print(rowFromQuery)
         self.customeUi = CustomeUI()
         self.customeUi.developer.setText(rowFromQuery[1] + " " + rowFromQuery[2])
-        self.customeUi.landdetails.setText(rowFromQuery[7] + " that occupy " + str(rowFromQuery[8]) + " km2")
-        self.customeUi.date_offered.setText("Granted on " + str(rowFromQuery[9]))
-        self.customeUi.phonenumber.setText(rowFromQuery[3])
-        self.customeUi.chikanda.setText(rowFromQuery[4])
-        self.customeUi.viewDelete.clicked.connect(lambda x : self.handle_del_on_list([rowFromQuery[0], rowFromQuery[5]]))
-        self.customeUi.edit_list_btn.clicked.connect(lambda x : self.handle_edit_on_list([rowFromQuery[0], rowFromQuery[5]]))
+        self.customeUi.landdetails.setText(rowFromQuery[5] + " that occupy " + str(rowFromQuery[6]) + " km2")
+        self.customeUi.date_offered.setText("Granted on " + str(rowFromQuery[6]))
+        self.customeUi.viewDelete.clicked.connect(lambda x : self.handle_del_on_list([rowFromQuery[0], rowFromQuery[3]]))
+        self.customeUi.edit_list_btn.clicked.connect(lambda x : self.handle_edit_on_list([rowFromQuery[0], rowFromQuery[3]]))
         self.wrapCustomeUiLabels()
-        myQListWidgetItem = QListWidgetItem(self.dlg.developerslistwidget)
+        myQListWidgetItem = QListWidgetItem(self.matabu.developerslistwidget)
         myQListWidgetItem.setSizeHint(self.customeUi.sizeHint())
-        self.dlg.developerslistwidget.addItem(myQListWidgetItem)
-        self.dlg.developerslistwidget.setItemWidget(myQListWidgetItem, self.customeUi)
+        self.matabu.developerslistwidget.addItem(myQListWidgetItem)
+        self.matabu.developerslistwidget.setItemWidget(myQListWidgetItem, self.customeUi)
 
     def wrapCustomeUiLabels(self):
         self.customeUi.landdetails.setWordWrap(True)
@@ -638,9 +589,6 @@ class Zomba:
         plot_id = str(lst[1])
         self.view_delete_pane_details(owner_id, plot_id)
         self.viewDeletePane.show()
-        self.dlg.developerslistwidget.clear()
-        self.developers()
-        self.available_customers()
 
     def handle_edit_on_list(self, lst):
         owner_id = str(lst[0])
@@ -654,34 +602,19 @@ class Zomba:
                         plot_name, ST_Area(geom), G.created_at, location_id, phone, address, G.id from 
         	            finale_owner F right join finale_owns G on F.owner_id = G.owner_id right join 
         	            finale_plot p on plot_id = p.plot_number right join 
-        	            finale_contact C on C.owner_id = F.owner_id where F.owner_id = '"""+owner_id+"""' and plot_id = '"""+plot_id+"""'"""
+        	            finale_contact C on C.owner_id = F.owner_id where F.owner_id = '"""+str(owner_id)+"""' and plot_id = '"""+str(plot_id)+"""'"""
             cursor.execute(query)
             row = cursor.fetchall()[0]
             print(row)
             self.editPane.firstname.setText(str(row[1]))
             self.editPane.lastname.setText(str(row[2]))
             self.editPane.balance.setText("e.g 2000")
-            self.editPane.phone.setText(str(row[9]))
-            self.editPane.address.setText(str(row[10]))
+            self.editPane.phone.setText(str(row[10]))
             self.editPane.show()
-
-            query = """
-                        select plot_name from 
-                        finale_plot P 
-                        join finale_owns W on P.plot_number = W.plot_id 
-                        join finale_owner O on W.owner_id = O.owner_id 
-                        where O.owner_id = '"""+owner_id+"""';
-                            """
-            self.editPane.personalplot.clear()
-            cursor.execute(query)
-            for i in cursor:
-                self.editPane.personalplot.addItem(i[0])
-            self.editPane.personalplot.setCurrentIndex(-1)
 
         except(Exception, psycopg2.Error) as error:
             if (connection):
                 print('faileed to connect', error)
-                print('faileed to connect editi details', error)
         finally:
             '''closing database connection'''
             if (connection):
@@ -690,71 +623,6 @@ class Zomba:
                 print("psql is closed")
         # self.view_delete_pane_details(owner_id, plot_id)
         # self.viewDeletePane.show()
-        self.editPane.personalplot.currentIndexChanged.connect(self.selectionChanged)
-        self.editPane.submit.clicked.connect(lambda x : self.editing(owner_id))
-
-    def editing(self, id):
-        firstname = self.editPane.firstname.text()
-        lastname = self.editPane.lastname.text()
-        phone = self.editPane.phone.text()
-        balance = self.editPane.balance.text()
-        address = self.editPane.address.toPlainText()
-
-        try:
-            connection = self.connection()
-            cursor = connection.cursor()
-
-            owns = """select id from finale_owns where owner_id = %s"""
-            cursor.execute(owns, (id))
-            owns_id = cursor.fetchone()[0]
-            print(owns_id)
-            feedback = ''
-            if self.editPane.editnames.isChecked():
-                update_developer = """Update finale_owner set firstname = %s, lastname = %s where owner_id = %s;"""
-                cursor.execute(update_developer, (firstname, lastname, str(id)))
-                connection.commit()
-                feedback = feedback + " Udated Names"
-
-            if self.editPane.editcontacts.isChecked():
-                update_contact = """Update finale_contact set phone = %s, address = %s where owner_id = %s;"""
-                cursor.execute(update_contact, (phone, address, str(id)))
-                connection.commit()
-                feedback = feedback + " Updated contacts"
-
-            if self.editPane.oldRadioButton.isChecked():
-                update_payment = """Update finale_payment set amount = %s where owns = %s;"""
-                cursor.execute(update_payment, (balance, str(owns_id)))
-                connection.commit()
-                feedback = feedback + " Udated finances"
-
-            if self.editPane.newRadioButton.isChecked():
-                new_payment_on_old_plot = """
-                    insert into finale_payment(amount, owns) 
-                    values('"""+balance+"""', '"""+owns_id+"""')
-                """
-                cursor.execute(new_payment_on_old_plot)
-                connection.commit()
-
-            self.showdialog("Developer updated sucessifully")
-            self.editPane.firstname.setText(firstname)
-            self.editPane.lastname.setText(lastname)
-            self.editPane.phone.setText(phone)
-            self.editPane.address.setText(address)
-        except(Exception, psycopg2.Error) as error:
-            if (connection):
-                print('failed to connect', error)
-                print("failed at add btn handler")
-        finally:
-            '''closing database connection'''
-            if (connection):
-                cursor.close()
-                connection.close()
-                print("psql is closed")
-        self.available_customers()
-        #self.report_customers()
-        self.dlg.developerslistwidget.clear()
-        self.developers()
-        self.editPane.close()
 
     def delete_ownership(self,owns_id):
         try:
@@ -767,7 +635,7 @@ class Zomba:
             print("dleleted owns")
             connection.commit()
             self.showdialog(" deleted ")
-            self.dlg.developerslistwidget.clear()
+            self.matabu.developerslistwidget.clear()
             self.developers()
             self.viewDeletePane.close()
 
@@ -824,8 +692,8 @@ class Zomba:
                 print("psql is closed")
 
     def selectedOwner(self):
-        row =  self.dlg.developerslistwidget.currentRow()
-        item = self.dlg.developerslistwidget.item(row)
+        row =  self.matabu.developerslistwidget.currentRow()
+        item = self.matabu.developerslistwidget.item(row)
         print(str(item.widget()))
 
     def rendermap(self, another = None):
@@ -833,12 +701,12 @@ class Zomba:
         uri.setConnection("localhost", "5432", "zomba_malawi", "postgres", "12345678")
         uri.setDataSource("public", "finale_plot", "geom")
         vlayer = QgsVectorLayer(uri.uri(), "wholemap", "postgres")
-        self.dlg.canvas.setCanvasColor(Qt.white)
+        self.matabu.canvas.setCanvasColor(Qt.white)
         if not vlayer.isValid():
             print("Layer failed to load!")
         QgsProject.instance().addMapLayer(vlayer)
-        self.dlg.canvas.setExtent(vlayer.extent())
-        self.dlg.canvas.setLayers([another,vlayer])
+        self.matabu.canvas.setExtent(vlayer.extent())
+        self.matabu.canvas.setLayers([another,vlayer])
 
     def selected_layer(self, number):
         st = "plot_number = "+ number
@@ -850,49 +718,6 @@ class Zomba:
         if not vlayer.isValid():
             print("Layer failed to load!")
         QgsProject.instance().addMapLayer(vlayer)
-        self.dlg.map_holder.setExtent(vlayer.extent())
-        self.dlg.map_holder.setLayers([vlayer])
+        self.matabu.map_holder.setExtent(vlayer.extent())
+        self.matabu.map_holder.setLayers([vlayer])
         self.rendermap(vlayer)
-
-
-    def selectionChanged(self):
-        pp = self.editPane.personalplot
-        txt = pp.currentText()
-        print(txt)
-        try:
-            connection = self.connection()
-            cursor = connection.cursor()
-            details_query = """
-                select amount_charged, sum(amount) , S.id 
-                from finale_owns S 
-                join finale_payment P on S.id = P.owns 
-                join finale_plot Po on S.plot_id = Po.plot_number 
-                where Po.plot_name = '"""+str(txt)+"""' 
-                group by S.amount_charged , S.id
-            """
-            cursor.execute(details_query)
-            row = cursor.fetchone()
-            self.editPane.charge.setText(str(row[0]))
-            self.editPane.bal.setText(str(row[0]-row[1]))
-            owns = row[2]
-            payments_q = """
-                select amount from finale_payment where owns = '"""+str(owns)+"""'
-            """
-            cursor.execute(payments_q)
-            ps = cursor.fetchall()[0]
-            print(ps)
-            self.editPane.payments.clear()
-            for i in ps:
-                self.editPane.payments.addItem(str(i))
-
-        except(Exception, psycopg2.Error) as error:
-            if (connection):
-                print('failed to connect', error)
-        finally:
-            '''closing database connection'''
-            if (connection):
-                     cursor.close()
-                     connection.close()
-                     print("psql is closed")
-
-

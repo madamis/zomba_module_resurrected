@@ -8,7 +8,7 @@
                              -------------------
         begin                : 2019-05-04
         git sha              : $Format:%H$
-        copyright            : (C) 2019 by Mada and Reneck
+        copyright            : (C) 2019 by chanco
         email                : madamiss@gmail.com
  ***************************************************************************/
 
@@ -32,7 +32,7 @@ from PyQt5.QtWidgets import QMainWindow
 
 FORM_CLASS, _ = uic.loadUiType(os.path.join(
     #os.path.dirname(__file__), 'zomba_module_dialog_base.ui'))
-    os.path.dirname(__file__), 'zombamain.ui'))
+    os.path.dirname(__file__), 'main_window.ui'))
 
 
 class ZombaDialog(QMainWindow, FORM_CLASS):
@@ -46,6 +46,18 @@ class ZombaDialog(QMainWindow, FORM_CLASS):
         # #widgets-and-dialogs-with-auto-connect
         self.setupUi(self)
 
+# class ZombaDialog(QtWidgets.QDialog, FORM_CLASS):
+#     def __init__(self, parent=None):
+#         """Constructor."""
+#         super(ZombaDialog, self).__init__(parent)
+#         # Set up the user interface from Designer through FORM_CLASS.
+#         # After self.setupUi() you can access any designer object by doing
+#         # self.<objectname>, and you can use autoconnect slots - see
+#         # http://qt-project.org/doc/qt-4.8/designer-using-a-ui-file.html
+#         # #widgets-and-dialogs-with-auto-connect
+#         self.setupUi(self)
+
+# This loads your .ui file so that PyQt can populate your plugin with the elements from Qt Designer
 CUSTOME_CLASS, _ = uic.loadUiType(os.path.join(
     os.path.dirname(__file__), 'CustomeItem.ui'))
 
@@ -54,6 +66,32 @@ class CustomeUI(QtWidgets.QDialog, CUSTOME_CLASS):
     def __init__(self, parent=None):
         """Constructor."""
         super(CustomeUI, self).__init__(parent)
+        # Set up the user interface from Designer through CUSTOME_CLASS.
+        # After self.setupUi() you can access any designer object by doing
+        # self.<objectname>, and you can use autoconnect slots - see
+        # http://qt-project.org/doc/qt-4.8/designer-using-a-ui-file.html
+        # #widgets-and-dialogs-with-auto-connect
+        self.setupUi(self)
+
+# This loads your .ui file so that PyQt can populate your plugin with the elements from Qt Designer
+LOGINPANEL_CLASS, _ = uic.loadUiType(os.path.join(
+    os.path.dirname(__file__), 'login.ui'))
+
+
+class LoginPanel(QtWidgets.QWidget, LOGINPANEL_CLASS):
+    def __init__(self, parent=None):
+        """Constructor."""
+        super(LoginPanel, self).__init__(parent)
+        self.setupUi(self)
+
+TABS_CLASS, _ = uic.loadUiType(os.path.join(
+    os.path.dirname(__file__), 'tabs.ui'))
+
+
+class Tabs(QtWidgets.QWidget, TABS_CLASS):
+    def __init__(self, parent=None):
+        """Constructor."""
+        super(Tabs, self).__init__(parent)
         self.setupUi(self)
 
 # This loads your .ui file so that PyQt can populate your plugin with the elements from Qt Designer

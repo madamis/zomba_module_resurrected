@@ -24,6 +24,7 @@ QPushButton{
 		padding:5px;
 		border:1px solid #grey;
 		border-radius:15px;
+		image: url(:/newPrefix/icon/pencil-edit-button.png);
 }
 QWidget#widget_7:hover{
 	border:7px solid yellow;
@@ -51,39 +52,9 @@ QWidget#widget_7:hover{
              <pointsize>14</pointsize>
             </font>
            </property>
-           <property name="styleSheet">
-            <string notr="true">border-bottom:2px solid grey;
-border-radius:0px;</string>
-           </property>
            <property name="text">
             <string>Developer</string>
            </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QWidget" name="widget" native="true">
-           <layout class="QVBoxLayout" name="verticalLayout">
-            <item>
-             <widget class="QLabel" name="phonenumber">
-              <property name="text">
-               <string>phone</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="chikanda">
-              <property name="text">
-               <string>chikanda</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
-              </property>
-             </widget>
-            </item>
-           </layout>
           </widget>
          </item>
          <item>
