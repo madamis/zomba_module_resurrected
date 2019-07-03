@@ -156,7 +156,7 @@ padding-left:20px;
 border-radius:5px;</string>
               </property>
               <property name="text">
-               <string>View and Delete</string>
+               <string>View</string>
               </property>
              </widget>
             </item>

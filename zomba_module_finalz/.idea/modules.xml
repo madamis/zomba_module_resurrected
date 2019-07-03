@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/PycharmProjects/New folder/Simple/.idea/Simple.iml" filepath="$USER_HOME$/PycharmProjects/New folder/Simple/.idea/Simple.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/SomethingElse/.idea/SomethingElse.iml" filepath="$USER_HOME$/PycharmProjects/SomethingElse/.idea/SomethingElse.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/New folder/presents/.idea/presents.iml" filepath="$USER_HOME$/PycharmProjects/New folder/presents/.idea/presents.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../zomba_module_2/.idea/zomba_module_2.iml" filepath="$PROJECT_DIR$/../zomba_module_2/.idea/zomba_module_2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/zomba_module_finalz.iml" filepath="$PROJECT_DIR$/.idea/zomba_module_finalz.iml" />
     </modules>
   </component>

@@ -28,6 +28,7 @@ from PyQt5 import uic
 from PyQt5 import QtWidgets
 
 # This loads your .ui file so that PyQt can populate your plugin with the elements from Qt Designer
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMainWindow
 
 FORM_CLASS, _ = uic.loadUiType(os.path.join(
@@ -65,6 +66,7 @@ class ViewDeletePane(QtWidgets.QWidget, DELETEPANE_CLASS):
     def __init__(self, parent=None):
         """Constructor."""
         super(ViewDeletePane, self).__init__(parent)
+        self.setWindowFlag(Qt.FramelessWindowHint)
         self.setupUi(self)
 
 # This loads your .ui file so that PyQt can populate your plugin with the elements from Qt Designer
@@ -76,4 +78,18 @@ class EditPane(QtWidgets.QWidget, EDITPANE_CLASS):
     def __init__(self, parent=None):
         """Constructor."""
         super(EditPane, self).__init__(parent)
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setupUi(self)
+
+
+# This loads your .ui file so that PyQt can populate your plugin with the elements from Qt Designer
+RECEIPT_CLASS, _ = uic.loadUiType(os.path.join(
+    os.path.dirname(__file__), 'receipt.ui'))
+
+
+class ReceiptPane(QtWidgets.QWidget, RECEIPT_CLASS):
+    def __init__(self, parent=None):
+        """Constructor."""
+        super(ReceiptPane, self).__init__(parent)
+        self.setWindowFlag(Qt.FramelessWindowHint)
         self.setupUi(self)
